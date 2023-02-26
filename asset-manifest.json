@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/makeup-online/static/css/main.b88201c1.css",
+    "main.js": "/makeup-online/static/js/main.3df3aa3e.js",
+    "static/media/3.png": "/makeup-online/static/media/3.2400c02ac4b46322b915.png",
+    "static/media/2.png": "/makeup-online/static/media/2.a4899794c9e771b6e181.png",
+    "static/media/1.png": "/makeup-online/static/media/1.00141963d1ddba4b05bd.png",
+    "static/media/4.png": "/makeup-online/static/media/4.16ba0907b5d3c0cc0182.png",
+    "static/media/5.png": "/makeup-online/static/media/5.ee1c89f913a1894de676.png",
+    "index.html": "/makeup-online/index.html",
+    "main.b88201c1.css.map": "/makeup-online/static/css/main.b88201c1.css.map",
+    "main.3df3aa3e.js.map": "/makeup-online/static/js/main.3df3aa3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b88201c1.css",
+    "static/js/main.3df3aa3e.js"
+  ]
+}
