@@ -14,7 +14,7 @@ const Home = () => {
   }, [dispatch]);
 
   const makeup = useSelector((state) => state.makeup);
-  console.log(makeup);
+
   return (
     <>
       <div>
@@ -34,14 +34,12 @@ const Home = () => {
         <br />
         <br />
         <h1>Because you deserve better,</h1>
-        <h2 style={{ fontSize: "3rem" }}>You deserve us.</h2>
+        <h2>You deserve us.</h2>
         <br />
         <br />
       </div>
       <div>
-        <h3 style={{ fontSize: "2.5rem", padding: "3rem", color: "#7f167f" }}>
-          Our picks..
-        </h3>
+        <h3 className="our-picks">Our picks..</h3>
       </div>
       <div className="items">
         {makeup.makeup &&
@@ -55,10 +53,10 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <h2 style={{ textAlign: "center", fontSize: "1.5rem" }}>
+      <h2 style={{ textAlign: "center", fontSize: "1.35rem" }}>
         We love what we do
       </h2>
-      <h2 style={{ textAlign: "center", fontSize: "4rem", color: "#f56eb3" }}>
+      <h2 style={{ textAlign: "center", fontSize: "3.5rem", color: "#f56eb3" }}>
         We love you
       </h2>
       <br />
@@ -82,7 +80,7 @@ const Home = () => {
       <br />
       <br /> <br />
       <br />
-      <h2 style={{ textAlign: "center", fontSize: "4rem" }}>
+      <h2 style={{ textAlign: "center", fontSize: "3.5rem" }}>
         Reach us anytime...!
       </h2>
       <br />
