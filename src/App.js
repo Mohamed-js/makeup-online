@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  // BrowserRouter as Router,
+  HashRouter,
+  Route,
+  Switch,
+} from "react-router-dom";
 import Bottombar from "./components/Bottombar";
 import Navbar from "./components/Navbar";
 import Categories from "./containers/Categories";
@@ -9,7 +14,7 @@ import Products from "./containers/Category";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <Navbar />
         <main>
           <Switch>
@@ -19,7 +24,7 @@ function App() {
             <Route exact path="/category/:category" component={Products} />
           </Switch>
         </main>
-      </Router>
+      </HashRouter>
       <Bottombar />
     </div>
   );
