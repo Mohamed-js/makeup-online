@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://makeup-online.herokuapp.com/)
+[Live Demo Link](https://mohamed-js.github.io/makeup-online/#/)
 
 ## Usage
 
