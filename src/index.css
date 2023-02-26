@@ -1,13 +1,383 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+  /* font-family: "Kalam", cursive; */
+  font-family: "Courgette", cursive;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: #460c68;
+  /* background-color: #f56eb3; */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+main {
+  margin-top: 93px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+  align-items: flex-end;
+  color: white;
+  background: #460c68;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: 1s;
+  background-color: #fff;
+}
+
+.open-menu {
+  display: flex;
+  top: 0;
+  height: calc(100vh - 85px);
+  opacity: 1;
+  animation: open-menu 1.5s ease-in forwards;
+}
+
+.menu-toggle {
+  position: relative;
+  animation: up-down 0.4s infinite alternate-reverse linear;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4px;
+  margin-bottom: 3px;
+}
+
+.cover-pic {
+  overflow: hidden;
+}
+
+.cover-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-pic.middle {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+
+.top-products {
+  text-align: center;
+  background: #f56eb3;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.category-card {
+  flex: 1;
+  height: 200px;
+}
+
+.category-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  max-height: 300px;
+}
+
+.card {
+  margin: 10px;
+  width: 100%;
+  transition: 0.5s;
+  box-shadow: rgb(237 237 237) 1px 3px 10px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgb(203, 203, 203) 5px 5px 15px;
+}
+
+.img-holder {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-name {
+  padding: 20px 8px;
+  flex: 1;
+  color: #fff;
+  background-color: #460c68;
+}
+
+.card-brand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #460c68;
+  padding: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  border-top-left-radius: 6px;
+}
+
+.card-price {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: #7f167f;
+  padding: 10px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.card-category {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #7f167f;
+  padding: 10px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.categories-btn {
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+.categories-btn a {
+  position: relative;
+}
+
+.categories-btn a:hover {
+  animation: up-down 0.2s infinite alternate-reverse linear;
+}
+
+.categories-btn svg {
+  font-weight: 800;
+  position: relative;
+  animation: left-right 1s infinite alternate;
+}
+
+@keyframes left-right {
+  0% {
+    left: 5px;
+  }
+
+  100% {
+    left: 20px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -2px;
+  }
+}
+
+/* PRODUCT PAGE */
+
+.product-cont {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.product-container {
+  padding: 15px;
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  /* background-color: #f56eb3; */
+}
+
+.product-container h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: white;
+  background-color: #7f167f;
+}
+
+.product-img-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 5px lightgrey;
+  margin-right: 20px;
+  min-height: 430px;
+}
+
+.product-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  max-height: 300px;
+}
+
+.tab-hover {
+  cursor: pointer;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 4px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 5px lightgrey;
+  border: grey 1px solid;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CATEGORIES */
+
+.categories {
+  text-align: center;
+  padding: 10px;
+}
+
+.filter {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.filter-select {
+  width: 100%;
+  margin: auto 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-select select {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.footer {
+}
+
+.footer .logo {
+  color: #000000;
+}
+
+@media screen and (min-width: 450px) {
+  .card {
+    /* flex-basis: 30%; */
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    /* flex-basis: 23%; */
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    /* flex-basis: 23%; */
+    width: 23%;
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    height: 0;
+  }
+  20% {
+    height: 150vh;
+  }
+  40% {
+    height: 80vh;
+  }
+  60% {
+    height: 110vh;
+  }
+  70% {
+    height: 90vh;
+  }
+  80% {
+    height: 105vh;
+  }
+  90% {
+    height: 95vh;
+  }
+  100% {
+    height: calc(100vh - 85px);
+  }
 }
