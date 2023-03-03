@@ -260,7 +260,7 @@ nav {
 /* PRODUCT PAGE */
 
 .product-cont {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 165px);
   display: flex;
   align-items: center;
 }
